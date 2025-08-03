@@ -1,0 +1,31 @@
+collections:
+  - name: "post"
+    label: "Blog"
+    path: "docs/blog/Posts"
+    format: "md"
+    file_name_generator: 
+      type: "date"
+    fields:
+      - type: "date"
+        name: "date"
+        label: "Date"
+        required: true
+        format: "YYYY-MM-DD"
+      - type: "string"
+        label: "Tags"
+        name: "tags"
+        list: true
+      - type: "boolean"
+        label: "Draft"
+        name: "draft"
+        default: false
+      - type: "string"
+        label: "Body"
+        name: "body"
+        default: "\n<!-- more -->\n"
+      # by default, we'll have body
+  - name: "Mkdocs Template"
+    label: "Mkdocs"
+    path: "docs"
+    format: "md"
+    # by default, we'll have body

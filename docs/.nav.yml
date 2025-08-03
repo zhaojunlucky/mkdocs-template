@@ -1,0 +1,8 @@
+sort:
+  type: natural
+  direction: asc
+  sections: mixed
+nav:
+    - Home: index.md 
+    - Blog: blog
+    - About: about.md

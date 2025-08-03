@@ -1,0 +1,1 @@
+# remove folder if you don't want to use https://mkdocs.gundamz.net as writer

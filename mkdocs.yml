@@ -1,0 +1,103 @@
+site_name: Mkdocs Template
+
+copyright: Copyright &copy; 2024-2025 <a href="https://gundamz.net" target='_blank'>Jun</a>.
+site_url: 
+
+
+plugins:
+  # - meta
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - awesome-nav
+  - tags:
+      tags_file: tags.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_datetime
+      fallback_to_build_date: true
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_dir: blog/Posts
+      post_date_format: medium
+      post_url_date_format: yyyy-MM-dd
+      post_url_format: "{date}/{slug}"
+      post_url_max_categories: 1
+      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: none
+      post_slugify_separator: "-"
+      post_readtime: false
+      post_excerpt: optional
+      archive: true
+      authors: true
+  - glightbox:
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - skip-lightbox
+
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  favicon: assets/images/logo/favicon.png
+  logo: assets/images/logo/logo.png
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.tabs
+    # - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    # - toc.integrate
+    - navigation.top
+    - header.autohide
+    - navigation.sections
+    - content.tooltips
+    - navigation.footer
+    - search.share
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+
+markdown_extensions:
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+     
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+
+extra_css:
+  - stylesheets/extra.css
+# extra:
+#   #add your own google analyties
+#   analytics:
+#     provider: google
+#     property: 
