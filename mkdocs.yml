@@ -1,7 +1,7 @@
 site_name: Mkdocs Template
 
 copyright: Copyright &copy; 2024-2025 <a href="https://gundamz.net" target='_blank'>Jun</a>.
-site_url: 
+site_url: https://mkdocs-template.vercel.app/
 
 
 plugins:
