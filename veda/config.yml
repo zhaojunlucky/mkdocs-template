@@ -1,3 +1,4 @@
+# refer to https://gundamz.net/mkdocs-cms/
 collections:
   - name: "post"
     label: "Blog"
